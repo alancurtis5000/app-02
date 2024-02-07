@@ -17,6 +17,9 @@
       },
       "api": {
         "app02": {}
+      },
+      "storage": {
+        "app02Friendly": {}
       }
     }
   }

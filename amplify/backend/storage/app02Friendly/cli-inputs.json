@@ -1,0 +1,14 @@
+{
+  "resourceName": "app02Friendly",
+  "policyUUID": "24f52a84",
+  "bucketName": "app02bucketname",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
