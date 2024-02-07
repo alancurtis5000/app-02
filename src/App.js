@@ -13,6 +13,7 @@ import {
   View,
   withAuthenticator,
 } from "@aws-amplify/ui-react";
+import { getCurrentUser } from "aws-amplify/auth";
 import { listNotes } from "./graphql/queries";
 import {
   createNote as createNoteMutation,
@@ -70,6 +71,21 @@ const App = ({ signOut }) => {
       variables: { input: { id } },
     });
   }
+
+  async function currentAuthenticatedUser() {
+    try {
+      const userData = await getCurrentUser();
+      const { username, userId, signInDetails } = userData;
+      console.log(`The username: ${username}`);
+      console.log(`The userId: ${userId}`);
+      console.log(`The signInDetails: ${signInDetails}`);
+      console.log({ userData });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  currentAuthenticatedUser();
 
   return (
     <View className="App">
