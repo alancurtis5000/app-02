@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
-// import { API } from "aws-amplify";
 import { generateClient } from "aws-amplify/api";
-import { uploadData, getProperties, remove } from "aws-amplify/storage";
+import { uploadData, remove, getUrl } from "aws-amplify/storage";
 import {
   Button,
   Flex,
@@ -34,7 +33,8 @@ const App = ({ signOut }) => {
     await Promise.all(
       notesFromAPI.map(async (note) => {
         if (note.image) {
-          const url = await getProperties({ key: note.name });
+          const fileData = await getUrl({ key: note.name });
+          const url = `${fileData.url.href}`;
           note.image = url;
         }
         return note;
