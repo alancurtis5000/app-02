@@ -6,4 +6,6 @@
 
 export { default as NoteCreateForm } from "./NoteCreateForm";
 export { default as NoteUpdateForm } from "./NoteUpdateForm";
+export { default as SongCreateForm } from "./SongCreateForm";
+export { default as SongUpdateForm } from "./SongUpdateForm";
 export { default as studioTheme } from "./studioTheme";

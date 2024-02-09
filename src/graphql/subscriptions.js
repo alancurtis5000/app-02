@@ -40,3 +40,48 @@ export const onDeleteNote = /* GraphQL */ `
     }
   }
 `;
+export const onCreateSong = /* GraphQL */ `
+  subscription OnCreateSong($filter: ModelSubscriptionSongFilterInput) {
+    onCreateSong(filter: $filter) {
+      id
+      title
+      description
+      filePath
+      like
+      owner
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateSong = /* GraphQL */ `
+  subscription OnUpdateSong($filter: ModelSubscriptionSongFilterInput) {
+    onUpdateSong(filter: $filter) {
+      id
+      title
+      description
+      filePath
+      like
+      owner
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteSong = /* GraphQL */ `
+  subscription OnDeleteSong($filter: ModelSubscriptionSongFilterInput) {
+    onDeleteSong(filter: $filter) {
+      id
+      title
+      description
+      filePath
+      like
+      owner
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
