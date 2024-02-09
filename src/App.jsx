@@ -14,42 +14,13 @@ import {
   withAuthenticator,
 } from "@aws-amplify/ui-react";
 import { getCurrentUser } from "aws-amplify/auth";
-import { listNotes, listSongs } from "./graphql/queries";
+import { listNotes } from "./graphql/queries";
 import {
   createNote as createNoteMutation,
   deleteNote as deleteNoteMutation,
 } from "./graphql/mutations";
 
-// app for songs
 const App = ({ signOut }) => {
-  const client = generateClient();
-  const [songs, setSongs] = useState([]);
-
-  useEffect(() => {
-    fetchSongs();
-  }, []);
-
-  const fetchSongs = async () => {
-    try {
-      const songData = await client.graphql({ query: listSongs });
-      const songList = songData.data.listSongs.items;
-      console.log("song list;", songList);
-      setSongs(songList);
-    } catch (error) {
-      console.log("error from fetching songs", error);
-    }
-  };
-  return (
-    <View className="App">
-      <h2>Song app</h2>
-      <Button onClick={signOut}>Sign Out</Button>
-    </View>
-  );
-};
-
-//// notes app below
-
-const AppNotes = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
   const client = generateClient();
 

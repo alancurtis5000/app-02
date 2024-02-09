@@ -1,0 +1,23 @@
+{
+  "id": {
+    "S": "jkdjkjskje45jek"
+  },
+  "title": {
+    "S": "My first Song"
+  },
+  "description": {
+    "S": "a cool song"
+  },
+  "like": {
+    "N": "4"
+  },
+  "filePath": {
+    "S": "nonething yet"
+  },
+  "createdAt": {
+    "S": "2024-02-09T18:12:40.664Z"
+  },
+  "updatedAt": {
+    "S": "2024-02-09T18:12:40.664Z"
+  }
+}
