@@ -18,7 +18,7 @@
     }
   },
   "auth": {
-    "app0266ef9559": {
+    "app02": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -31,7 +31,8 @@
           "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
-          "EMAIL"
+          "EMAIL",
+          "NAME"
         ],
         "socialProviders": [],
         "usernameAttributes": [
